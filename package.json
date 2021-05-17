@@ -1,0 +1,53 @@
+{
+  "engines": {
+    "node": ">= 12.0"
+  },
+  "name": "horse-racing",
+  "license": "BSD-2-Clause",
+  "version": "0.1.0",
+  "scripts": {
+    "clean": "rimraf dist doc",
+    "doc": "npm-run-all doc:*",
+    "doc:jsdoc": "jsdoc -r src -c .jsdocrc.js",
+    "doc:dep": "depcruise --output-type dot --output-to doc/depgraph.dot src",
+    "doc:dot": "dot -Tsvg -odoc/depgraph.svg doc/depgraph.dot",
+    "dev": "vite src",
+    "build": "vite build --emptyOutDir --outDir ../dist src",
+    "serve": "http-server dist",
+    "preview": "npm-run-all -p preview:build serve",
+    "preview:build": "vite build -w --outDir ../dist src",
+    "lint": "npm-run-all lint:*",
+    "lint:script": "eslint --ext .js src",
+    "lint:style": "stylelint src/**/*.css",
+    "format": "npm-run-all -p format:*",
+    "format:script": "eslint --fix --ext .js src",
+    "format:style": "stylelint --fix src/**/*.css",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.2",
+    "@babel/eslint-parser": "^7.14.2",
+    "@babel/eslint-plugin": "^7.13.16",
+    "@babel/preset-env": "^7.14.2",
+    "dependency-cruiser": "^10.0.1",
+    "eslint": "^7.26.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.23.2",
+    "eslint-plugin-jsdoc": "^34.6.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "hogan.js": "^3.0.2",
+    "http-server": "^0.12.3",
+    "husky": "^6.0.0",
+    "jsdoc": "^3.6.7",
+    "lint-staged": "^11.0.0",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2",
+    "stimulus": "^2.0.0",
+    "stylelint": "^13.13.1",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-standard": "^22.0.0",
+    "stylelint-order": "^4.1.0",
+    "vite": "^2.3.0"
+  }
+}

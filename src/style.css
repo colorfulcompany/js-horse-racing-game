@@ -1,0 +1,55 @@
+#app {
+  margin-top: 60px;
+  color: #2c3e50;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.board {
+  text-align: center;
+}
+
+.board-frame {
+  width: 10rem;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 1rem;
+  background: brown;
+  border: 2px outset;
+}
+
+.board-content-title,
+.board-content-announce {
+  color: white;
+  font-weight: bold;
+}
+
+.field {
+  color: inherited;
+  background: transparent;
+}
+
+.field.highlight {
+  color: white;
+  background: blue;
+}
+
+.field-element {
+  margin-right: auto;
+  margin-left: auto;
+  background: rgb(118, 228, 118);
+}
+
+.field-course {
+  height: 2em;
+  font-weight: bold;
+  font-family: monospace;
+  text-align: left;
+  border-bottom: 1px solid white;
+}
+
+.field-course-horse {
+  position: relative;
+}

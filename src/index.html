@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Horse Racing</title>
+  </head>
+  <body>
+    <div id="app" data-controller="app">
+      <div class="board">
+        <div class="board-frame">
+        <div class="board-content-title">CC Cup</div>
+        <div class="board-content-announce" data-app-target="result">&nbsp;</div>
+        </div>        
+      </div>
+      <div data-app-target="congrats">&nbsp;</div>
+      <div class="field">
+        <form>
+        <table class="field-element" data-controller="field" data-app-target="field">
+          <thead>
+          <tr>
+            <th></th>
+            <th></th>
+            <th>Goal</th>
+          </tr>
+          </thead>
+          <tbody data-field-target="courses"></tbody>
+        </table>
+        </form>
+      </div>
+      <div class="button" data-controller="button" data-app-target="button">
+        <button data-action="button#fireStart">Start !</button>
+        <button data-action="button#reset">clear</button><br>
+        <button
+          data-action="button#next"
+          data-button-target="next"
+          style="display: none;">Next</button>
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
