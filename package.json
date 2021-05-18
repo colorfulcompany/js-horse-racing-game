@@ -4,7 +4,7 @@
   },
   "name": "horse-racing",
   "license": "BSD-2-Clause",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "scripts": {
     "clean": "rimraf dist doc",
     "doc": "npm-run-all doc:*",
