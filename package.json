@@ -12,7 +12,7 @@
     "doc:dep": "depcruise --output-type dot --output-to doc/depgraph.dot src",
     "doc:dot": "dot -Tsvg -odoc/depgraph.svg doc/depgraph.dot",
     "dev": "vite src",
-    "build": "vite build --emptyOutDir --outDir ../dist src",
+    "build": "vite build --base ./ --emptyOutDir --outDir ../dist src",
     "serve": "http-server dist",
     "preview": "npm-run-all -p preview:build serve",
     "preview:build": "vite build -w --outDir ../dist src",
