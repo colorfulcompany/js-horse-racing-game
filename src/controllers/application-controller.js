@@ -89,7 +89,7 @@ export class ApplicationController extends Controller {
    * @returns {void}
    */
   bannerCongrats () {
-    this.congratsTarget.innerHTML = 'Congraturations !'
+    this.congratsTarget.innerHTML = 'Congratulations !'
   }
 
   /**
