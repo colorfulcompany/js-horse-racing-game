@@ -1,0 +1,26 @@
+name: 'package Vite project'
+on: 
+  push:
+    tags: 
+      - "*"
+  workflow_dispatch:
+    branches:
+      - "*"
+
+jobs:
+  store_artifact:
+    runs-on: ubuntu-latest
+    name: build artifact for standalone playing
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '12'
+      - run: npm i -g yarn
+      - run: yarn install
+      - id: 'build'
+        run: yarn run build        
+      - uses: actions/upload-artifact@v2
+        with:
+          name: js-horse-racing-game
+          path: dist/
