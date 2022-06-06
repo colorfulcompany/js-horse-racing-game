@@ -1,6 +1,6 @@
 {
   "engines": {
-    "node": ">= 12.0"
+    "node": ">= 14.0"
   },
   "name": "horse-racing",
   "license": "BSD-2-Clause",
